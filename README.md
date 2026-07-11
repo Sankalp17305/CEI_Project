@@ -568,18 +568,3 @@ It's not coherent Shakespeare — words are frequently invented and grammar
 breaks down — but the model has clearly learned: capitalized character
 names followed by colons, line-break/verse structure, stage-like dialogue
 formatting, and period-appropriate vocabulary and contractions.
-
-## 15. Ideas for Extending This Project
-
-- **Log and plot** train/val loss curves for both models to visualize the
-  gap in modeling capacity.
-- **Implement EX1 above** and benchmark training speed before/after.
-- **Scale up** `n_embd`, `n_head`, `n_layer`, or `block_size` (compute
-  permitting) to see how output quality improves with model size.
-- **Checkpointing**: add `torch.save(model.state_dict(), ...)` /
-  `torch.load(...)` so training doesn't need to restart from scratch.
-- **Switch tokenization** from character-level to a subword tokenizer
-  (byte-pair encoding) and compare vocabulary size, sequence length, and
-  generation quality tradeoffs.
-- **Try a different corpus** to see how well the same architecture adapts
-  to other writing styles.
